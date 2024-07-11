@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();//esta instancia nos permite 
 //usar las propiedads de express
 const port = 3001;
-
+const url = 'http://localhost';
 //crud
 app.get('/', (req, res) => {
     res.send('Respuesta del get desde express')
@@ -18,5 +18,5 @@ app.get('/test', (req, res) => {
 })
 
 app.listen(port,()=>{
-    console.log('Puerto de servicio', port)
+    console.log(`Puerto de servicio ${url}:${port}`, port)
 })
